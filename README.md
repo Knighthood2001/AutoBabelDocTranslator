@@ -2,13 +2,14 @@
 
 <div align="center">
 
-https://img.shields.io/github/stars/Knighthood2001/AutoBabelDocTranslator?style=social](https://github.com/Knighthood2001/AutoBabelDocTranslator/stargazers)
-https://img.shields.io/github/forks/Knighthood2001/AutoBabelDocTranslator?style=social](https://github.com/Knighthood2001/AutoBabelDocTranslator/network/members)
-https://img.shields.io/github/issues/Knighthood2001/AutoBabelDocTranslator](https://github.com/Knighthood2001/AutoBabelDocTranslator/issues)
-https://img.shields.io/github/issues-pr/Knighthood2001/AutoBabelDocTranslator](https://github.com/Knighthood2001/AutoBabelDocTranslator/pulls)
-https://img.shields.io/github/license/Knighthood2001/AutoBabelDocTranslator](https://github.com/Knighthood2001/AutoBabelDocTranslator/blob/main/LICENSE)
-https://img.shields.io/badge/python-3.8%2B-blue](https://www.python.org/)
-https://img.shields.io/badge/Playwright-1.40%2B-green](https://playwright.dev/)
+
+[![GitHub Stars](https://img.shields.io/github/stars/Knighthood2001/AutoBabelDocTranslator?style=social)](https://github.com/Knighthood2001/AutoBabelDocTranslator/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Knighthood2001/AutoBabelDocTranslator?style=social)](https://github.com/Knighthood2001/AutoBabelDocTranslator/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/pulls)
+[![License](https://img.shields.io/github/license/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/blob/main/LICENSE)
+[![中文](https://img.shields.io/badge/🇨🇳_中文-当前-blue)](README.md)
+[![English](https://img.shields.io/badge/🇺🇸_English-Available-green)](README_en.md)
 </div>
 
 > **⚠️ 免责声明：**
