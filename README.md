@@ -28,7 +28,6 @@ https://img.shields.io/badge/Playwright-1.40%2B-green](https://playwright.dev/)
 ## ✨ 功能特性
 
 ✅ **自动上传 PDF 文件**  
-✅ **智能验证码处理**  
 ✅ **一键触发翻译**  
 ✅ **登录状态持久化**  
 ✅ **跨平台支持** (Windows/Linux)  
@@ -53,47 +52,22 @@ pip install -r requirements.txt
 
 # 安装 Playwright 浏览器
 playwright install
+# 这一步骤可能需要花费较长时间，取决于网络环境
 ```
 
 ### 🏃 使用教程
 
-#### 1. 首次使用 - 保存登录状态
+#### 上传并翻译 PDF
 
 ```bash
-python main.py --save-login
-```
-按照提示登录 BabelDoc 账号，登录状态将自动保存。
-
-#### 2. 上传并翻译 PDF
-
-```bash
-python main.py --file /path/to/your/file.pdf
+python main.py https://arxiv.org/pdf/2111.02045
 ```
 
-#### 3. 查看帮助
-
-```bash
-python main.py --help
-```
-
-## ⚙️ 配置选项
-
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| `--file` | 要上传的 PDF 文件路径 | 无 |
-| `--save-login` | 保存登录状态 | False |
-| `--headless` | 无头模式运行 | False |
-| `--timeout` | 操作超时时间(秒) | 30 |
+另外，`url2babeldoc.py`脚本可以在你的编辑器中执行。
 
 ## 🤝 贡献指南
 
-欢迎提交 Issue 和 Pull Request！贡献前请阅读：
-1. CONTRIBUTING.md
-2. CODE_OF_CONDUCT.md
-
-## 📜 许可证
-
-本项目采用 LICENSE。
+欢迎提交 Issue 和 Pull Request！
 
 ## 💖 致谢
 
