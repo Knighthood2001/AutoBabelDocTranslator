@@ -7,8 +7,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/Knighthood2001/AutoBabelDocTranslator?style=social)](https://github.com/Knighthood2001/AutoBabelDocTranslator/network/members)
 [![GitHub Issues](https://img.shields.io/github/issues/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/pulls)
-[![License](https://img.shields.io/github/license/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/blob/main/LICENSE)
-[![中文](https://img.shields.io/badge/🇨🇳_中文-当前-blue)](README.md)
+[![中文](https://img.shields.io/badge/🇨🇳_中文文档-当前-blue)](README.md)
 [![English](https://img.shields.io/badge/🇺🇸_English-Available-green)](README_en.md)
 </div>
 
