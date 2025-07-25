@@ -45,3 +45,39 @@
 2025-07-25 18:50:09 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
 2025-07-25 18:50:09 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/code/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
 2025-07-25 18:50:11 AutoBabelDocTranslator ERROR - ❌ 翻译过程中出错: Page.click: Target page, context or browser has been closed
+2025-07-25 19:48:33 AutoBabelDocTranslator INFO - 📥 开始下载: https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 19:48:33 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 19:48:33 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='openaccess.thecvf.com', port=443): Max retries exceeded with url: /content/ICCV2021/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1145)')))
+2025-07-25 19:58:10 AutoBabelDocTranslator INFO - 获取到论文标题: Deep Point Set Resampling via Gradient Fields
+2025-07-25 19:58:10 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2111.02045
+2025-07-25 19:58:10 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Deep Point Set Resampling via Gradient Fields.pdf
+2025-07-25 19:58:11 AutoBabelDocTranslator INFO - 📦 文件大小: 3.65 MB
+2025-07-25 19:58:12 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Deep Point Set Resampling via Gradient Fields.pdf
+2025-07-25 19:58:18 AutoBabelDocTranslator INFO - ⚠️ 需要登录，请手动登录...
+2025-07-25 19:58:25 AutoBabelDocTranslator INFO - ✅ 登录成功，已检测到上传按钮
+2025-07-25 19:58:25 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Deep Point Set Resampling via Gradient Fields.pdf
+2025-07-25 19:58:27 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 19:58:28 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-25 20:00:49 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-25 20:05:43 AutoBabelDocTranslator INFO - 📥 开始下载: https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 20:05:43 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 20:05:44 AutoBabelDocTranslator INFO - 📦 文件大小: 1.94 MB
+2025-07-25 20:05:46 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 20:05:56 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 20:05:56 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf
+2025-07-25 20:05:58 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 20:05:59 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-25 20:08:15 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-25 20:09:20 AutoBabelDocTranslator INFO - 获取到论文标题: Sandwich: Separating Prefill-Decode Compilation for Efficient CPU LLM Serving
+2025-07-25 20:09:20 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18454
+2025-07-25 20:09:20 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Sandwich_ Separating Prefill-Decode Compilation for Efficient CPU LLM Serving.pdf
+2025-07-25 20:09:20 AutoBabelDocTranslator INFO - 📦 文件大小: 1.41 MB
+2025-07-25 20:09:21 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Sandwich_ Separating Prefill-Decode Compilation for Efficient CPU LLM Serving.pdf
+2025-07-25 20:09:31 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 20:09:31 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Sandwich_ Separating Prefill-Decode Compilation for Efficient CPU LLM Serving.pdf
+2025-07-25 20:09:33 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 20:09:34 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-25 20:12:27 AutoBabelDocTranslator INFO - ✅ 翻译流程完成

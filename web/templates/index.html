@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoBabelDocTranslator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --light-bg: #f8fafc;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            min-height: 100vh;
+            padding: 2rem 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-body {
+            padding: 1.75rem;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .progress-container {
+            margin-top: 1.5rem;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .progress-container.show {
+            opacity: 1;
+        }
+
+        .progress {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background-color: var(--primary-color);
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            margin-top: 0.75rem;
+            color: #475569;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .spinner {
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .result-container, .error-container {
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            padding: 1.25rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+            display: none;
+        }
+
+        .result-container.show, .error-container.show {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+
+        .alert-success {
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success-color);
+            color: #059669;
+        }
+
+        .alert-danger {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger-color);
+            color: #dc2626;
+        }
+
+        .alert-heading {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-primary .bi {
+            font-size: 1.1rem;
+        }
+
+        .requirements-card {
+            background-color: #f1f5f9;
+        }
+
+        .requirements-card .card-text {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        code {
+            background-color: rgba(148, 163, 184, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .card-body {
+                padding: 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .btn-primary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">AutoBabelDocTranslator</h1>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <form id="translationForm">
+                    <div class="mb-4">
+                        <label for="pdfUrl" class="form-label">PDF URL</label>
+                        <input type="url" class="form-control" id="pdfUrl" 
+                               placeholder="https://example.com/research-paper.pdf" 
+                               required>
+                        <div class="form-text text-muted mt-1">
+                            支持 arXiv、CVPR 等学术平台的 PDF 链接
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-translate me-2"></i>开始翻译
+                    </button>
+                </form>
+                
+                <div id="progressContainer" class="progress-container">
+                    <div class="progress">
+                        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                             role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <div id="progressText" class="progress-text mt-2">
+                        <span class="spinner"></span> 初始化中...
+                    </div>
+                </div>
+                
+                <div id="resultContainer" class="result-container alert-success">
+                    <h4 class="alert-heading" id="resultTitle">翻译完成！</h4>
+                    <p id="resultMessage" class="mb-3"></p>
+                    <hr>
+                    <p class="mb-0" id="resultLink">
+                        <a href="" target="_blank" class="text-success fw-medium">
+                            <i class="bi bi-external-link me-1"></i>查看翻译结果
+                        </a>
+                    </p>
+                </div>
+                
+                <div id="errorContainer" class="error-container alert-danger">
+                    <strong><i class="bi bi-exclamation-circle me-1"></i>错误：</strong> 
+                    <span id="errorMessage"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card requirements-card mt-4">
+            <div class="card-body">
+                <h5 class="card-title text-primary mb-3">
+                    <i class="bi bi-info-circle me-2"></i>使用要求
+                </h5>
+                <p class="card-text">
+                    本工具需要在本地环境安装 Playwright。<br>
+                    <strong>请确保已运行以下命令：</strong>
+                    <code>playwright install</code>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const form = document.getElementById('translationForm');
+        const urlInput = document.getElementById('pdfUrl');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const resultContainer = document.getElementById('resultContainer');
+        const errorContainer = document.getElementById('errorContainer');
+        const resultMessage = document.getElementById('resultMessage');
+        const resultLink = document.getElementById('resultLink');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const url = urlInput.value.trim();
+            if (!url) return;
+
+            // 重置UI状态
+            resetUI();
+            
+            // 显示进度容器并初始化状态
+            progressContainer.style.display = 'block';
+            setTimeout(() => progressContainer.classList.add('show'), 10);
+            progressBar.style.width = '0%';
+            progressText.innerHTML = '<span class="spinner"></span> 开始处理翻译任务...';
+
+            // 提交翻译请求
+            fetch('/translate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('请求失败，请检查网络');
+                return response.json();
+            })
+            .then(data => {
+                if (data.error) throw new Error(data.error);
+                
+                // 轮询状态更新（1.5秒一次，减少请求频率）
+                const statusInterval = setInterval(() => {
+                    fetch('/status')
+                        .then(res => res.json())
+                        .then(status => {
+                            // 更新进度文本
+                            progressText.innerHTML = `<span class="spinner"></span> ${status.message}`;
+                            
+                            // 模拟进度条更新（如果有百分比数据可替换）
+                            const progressMap = {
+                                'downloading': 30,
+                                'uploading': 50,
+                                'translating': 70,
+                                'completed': 100
+                            };
+                            const progress = progressMap[status.status] || 0;
+                            progressBar.style.width = `${progress}%`;
+                            
+                            // 处理完成状态
+                            if (status.status === 'completed') {
+                                clearInterval(statusInterval);
+                                progressContainer.classList.remove('show');
+                                setTimeout(() => {
+                                    progressContainer.style.display = 'none';
+                                    resultMessage.textContent = status.message;
+                                    resultLink.querySelector('a').href = status.translation_url || '#';
+                                    resultContainer.classList.add('show');
+                                }, 300);
+                            }
+                            
+                            // 处理错误状态
+                            if (status.status === 'error') {
+                                clearInterval(statusInterval);
+                                progressContainer.classList.remove('show');
+                                setTimeout(() => {
+                                    progressContainer.style.display = 'none';
+                                    errorMessage.textContent = status.message;
+                                    errorContainer.classList.add('show');
+                                }, 300);
+                            }
+                        })
+                        .catch(err => {
+                            clearInterval(statusInterval);
+                            showError('状态查询失败：' + err.message);
+                        });
+                }, 1500); // 1.5秒轮询一次
+            })
+            .catch(err => {
+                showError(err.message);
+            });
+        });
+
+        // 重置UI状态
+        function resetUI() {
+            resultContainer.classList.remove('show');
+            errorContainer.classList.remove('show');
+            resultContainer.style.display = 'none';
+            errorContainer.style.display = 'none';
+        }
+
+        // 显示错误信息
+        function showError(msg) {
+            progressContainer.classList.remove('show');
+            setTimeout(() => {
+                progressContainer.style.display = 'none';
+                errorMessage.textContent = msg;
+                errorContainer.classList.add('show');
+            }, 300);
+        }
+
+        // 输入框验证反馈
+        urlInput.addEventListener('input', function() {
+            const isValid = this.checkValidity();
+            this.classList.toggle('border-danger', !isValid && this.value);
+        });
+    </script>
+</body>
+</html>

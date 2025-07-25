@@ -66,12 +66,23 @@ playwright install
 
 ### 🏃 使用教程
 
-#### 上传并翻译 PDF
+#### 方式1：上传并翻译 PDF
 
 ```bash
 python main.py
 ```
+#### 方式2：webUI中使用
 
+```bash
+python web/app.py
+```
+然后访问
+```shell
+127.0.0.1:5000
+```
+就能够使用网页界面了。
+
+![webUI](doc/imgs/webUI.png)
 ## 🤝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
