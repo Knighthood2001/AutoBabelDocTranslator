@@ -2,6 +2,11 @@
 
 <div align="center">
 
+![webUI](doc/imgs/logo.png)
+
+</div>
+
+<div align="center">
 
 [![GitHub Stars](https://img.shields.io/github/stars/Knighthood2001/AutoBabelDocTranslator?style=social)](https://github.com/Knighthood2001/AutoBabelDocTranslator/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Knighthood2001/AutoBabelDocTranslator?style=social)](https://github.com/Knighthood2001/AutoBabelDocTranslator/network/members)
@@ -9,6 +14,7 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Knighthood2001/AutoBabelDocTranslator)](https://github.com/Knighthood2001/AutoBabelDocTranslator/pulls)
 [![中文](https://img.shields.io/badge/🇨🇳_中文文档-当前-blue)](README.md)
 [![English](https://img.shields.io/badge/🇺🇸_English-Available-green)](README_en.md)
+
 </div>
 
 > **⚠️ 免责声明：**
