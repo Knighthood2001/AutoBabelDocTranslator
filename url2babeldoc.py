@@ -10,7 +10,7 @@ uploader = BabelDocUploader(storage_state="loginstate.json")
 
 async def main():
     # 上传文件进行翻译
-    input_file_path = downloader.download("https://arxiv.org/pdf/2111.02045.pdf")
+    input_file_path = downloader.download("https://arxiv.org/abs/2109.15321")
     await uploader.upload_file(input_file_path)
 
 

@@ -28,23 +28,28 @@ class BabelDocUploader:
         width, height = getScreenSize.get_screen_size()
         self.viewport = {'width': width-50, 'height': height-50}
         self.login_required_selector = "#immediateLogin"
+        self.playwright = None
+        self.browser = None
+        self.context = None
+        self.page = None
 
     async def _launch_browser(self):
-        playwright = await async_playwright().start()
-        browser_launcher = getattr(playwright, self.browser_config.browser_type)
-        browser = await browser_launcher.launch(
-            headless=self.browser_config.headless,
-            args=self.browser_config.args,
-            ignore_default_args=['--enable-automation']
-        )
-        context = await browser.new_context(
-            viewport=self.viewport,
-            no_viewport=False,
-            accept_downloads=True,
-            storage_state=self.storage_state if os.path.exists(self.storage_state) else None
-        )
-        page = await context.new_page()
-        return playwright, browser, context, page
+        if self.playwright is None:
+            self.playwright = await async_playwright().start()
+            browser_launcher = getattr(self.playwright, self.browser_config.browser_type)
+            self.browser = await browser_launcher.launch(
+                headless=self.browser_config.headless,
+                args=self.browser_config.args,
+                ignore_default_args=['--enable-automation']
+            )
+            self.context = await self.browser.new_context(
+                viewport=self.viewport,
+                no_viewport=False,
+                accept_downloads=True,
+                storage_state=self.storage_state if os.path.exists(self.storage_state) else None
+            )
+            self.page = await self.context.new_page()
+        return self.playwright, self.browser, self.context, self.page
 
     async def save_login_state(self, login_url="https://app.immersivetranslate.com/babel-doc", wait_seconds=60):
         playwright, browser, context, page = await self._launch_browser()
@@ -53,8 +58,6 @@ class BabelDocUploader:
         await asyncio.sleep(wait_seconds)
         await context.storage_state(path=self.storage_state)
         print(f"✅ 登录状态已保存至 {self.storage_state}")
-        await browser.close()
-        await playwright.stop()
 
     async def _check_login(self, page, context, relogin_seconds=60):
         try:
@@ -67,6 +70,14 @@ class BabelDocUploader:
         except PlaywrightTimeoutError:
             print("✅ 已检测到已登录状态")
             return True
+
+    async def close(self):
+        if self.browser:
+            await self.browser.close()
+            self.browser = None
+        if self.playwright:
+            await self.playwright.stop()
+            self.playwright = None
 
     async def upload_file(self, input_file, target_url="https://app.immersivetranslate.com/babel-doc", relogin_seconds=60):
         playwright, browser, context, page = await self._launch_browser()
@@ -108,9 +119,6 @@ class BabelDocUploader:
 
         # 等待页面关闭
         await closed_event.wait()
-
-        await browser.close()
-        await playwright.stop()
 
 # ========== 使用示例 ==========
 
