@@ -1,9 +1,7 @@
 # 🔥 AutoBabelDocTranslator
 
 <div align="center">
-
-![webUI](doc/imgs/logo.png)
-
+  <img src="doc/imgs/logo.png" width="50%" alt="webUI">
 </div>
 
 <div align="center">
