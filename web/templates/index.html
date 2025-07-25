@@ -6,56 +6,107 @@
     <title>AutoBabelDocTranslator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --light-bg: #f8fafc;
-            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+            --primary-color: #ea4c89;
+            --primary-light: #ea4c89;
+            --secondary-color: #ea4c89;
+            --success-color: #0b4353;
+            --light-bg: #f8f9fa;
+            --dark-bg: #234eb4;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: var(--light-bg);
+            background: linear-gradient(135deg, #445a8f, #274b85);
             min-height: 100vh;
-            padding: 2rem 0;
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding: 2rem 1rem;
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            color: #e2e8f0;
         }
 
         .container {
             max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        h1 {
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
             position: relative;
-            display: inline-block;
+            padding-bottom: 1.5rem;
         }
 
-        h1::after {
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #4361ee, #4cc9f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .header::after {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-            border-radius: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--success-color));
+            border-radius: 2px;
         }
 
         .card {
-            border: none;
-            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(56, 70, 100, 0.5);
+            border-radius: 16px;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
             overflow: hidden;
+            backdrop-filter: blur(10px);
+            margin-bottom: 1.5rem;
         }
 
         .card:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-header {
+            background: rgba(30, 41, 59, 0.5);
+            border-bottom: 1px solid rgba(56, 70, 100, 0.5);
+            padding: 1.25rem 1.75rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .card-body {
@@ -64,41 +115,52 @@
 
         .form-label {
             font-weight: 500;
-            color: #334155;
+            color: #cbd5e1;
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
         .form-control {
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(56, 70, 100, 0.8);
+            border-radius: 10px;
+            padding: 0.85rem 1.25rem;
             font-size: 1rem;
             transition: var(--transition);
+            color: #e2e8f0;
         }
 
         .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: rgba(15, 23, 42, 0.8);
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
             outline: none;
+            color: #f8fafc;
+        }
+
+        .form-control::placeholder {
+            color: #64748b;
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border: none;
-            border-radius: 8px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 500;
+            border-radius: 10px;
+            padding: 0.9rem 1.75rem;
+            font-weight: 600;
             font-size: 1rem;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
         }
 
         .btn-primary:active {
@@ -106,10 +168,10 @@
         }
 
         .progress-container {
-            margin-top: 1.5rem;
+            margin-top: 1.75rem;
             display: none;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
 
         .progress-container.show {
@@ -117,29 +179,45 @@
         }
 
         .progress {
-            height: 8px;
-            border-radius: 4px;
-            background-color: #e2e8f0;
-            overflow: hidden;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgba(30, 41, 59, 0.7);
+            overflow: visible;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .progress-bar {
-            background-color: var(--primary-color);
-            transition: width 0.5s ease;
+            background: linear-gradient(90deg, var(--primary-light), var(--success-color));
+            border-radius: 5px;
+            transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: visible;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 18px;
+            height: 18px;
+            background: var(--success-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(76, 201, 240, 0.7);
         }
 
         .progress-text {
-            margin-top: 0.75rem;
-            color: #475569;
+            margin-top: 1rem;
+            color: #94a3b8;
             font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .spinner {
-            width: 1rem;
-            height: 1rem;
+            width: 1.1rem;
+            height: 1.1rem;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: white;
@@ -152,13 +230,15 @@
         }
 
         .result-container, .error-container {
-            margin-top: 1.5rem;
-            border-radius: 8px;
-            padding: 1.25rem;
+            margin-top: 1.75rem;
+            border-radius: 12px;
+            padding: 1.5rem;
             opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.4s ease;
+            transform: translateY(15px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: none;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(56, 70, 100, 0.5);
         }
 
         .result-container.show, .error-container.show {
@@ -167,126 +247,259 @@
             display: block;
         }
 
-        .alert-success {
-            background-color: rgba(16, 185, 129, 0.1);
-            border: 1px solid var(--success-color);
-            color: #059669;
+        .result-container {
+            border-left: 4px solid var(--success-color);
         }
 
-        .alert-danger {
-            background-color: rgba(239, 68, 68, 0.1);
-            border: 1px solid var(--danger-color);
-            color: #dc2626;
+        .error-container {
+            border-left: 4px solid #ef4444;
         }
 
         .alert-heading {
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #e2e8f0;
         }
 
-        .btn-primary .bi {
+        .result-container .alert-heading {
+            color: var(--success-color);
+        }
+
+        .error-container .alert-heading {
+            color: #ef4444;
+        }
+
+        .result-message {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+            border-radius: 8px;
+            padding: 0.65rem 1.25rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline:hover {
+            background: rgba(76, 201, 240, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .supported-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .platform-tag {
+            background: rgba(67, 97, 238, 0.15);
+            border: 1px solid rgba(67, 97, 238, 0.3);
+            border-radius: 20px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 70, 100, 0.4);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(67, 97, 238, 0.6);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
             font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #e2e8f0;
         }
 
-        .requirements-card {
-            background-color: #f1f5f9;
-        }
-
-        .requirements-card .card-text {
-            color: #475569;
+        .feature-desc {
+            color: #94a3b8;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        code {
-            background-color: rgba(148, 163, 184, 0.1);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: 'Fira Code', monospace;
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #64748b;
             font-size: 0.9rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(56, 70, 100, 0.4);
         }
 
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 1rem;
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
             }
-
+            
             .card-body {
-                padding: 1.25rem;
+                padding: 1.5rem;
             }
-
-            h1 {
-                font-size: 1.75rem;
-            }
-
+            
             .btn-primary {
                 width: 100%;
                 justify-content: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 1.5rem 0.75rem;
+            }
+            
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .card-header {
+                padding: 1rem 1.25rem;
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mb-5">AutoBabelDocTranslator</h1>
+        <div class="header">
+            <h1>AutoBabelDocTranslator</h1>
+            <p>自动化下载翻译学术PDF文档，支持arXiv、CVPR等平台的研究论文</p>
+        </div>
         
-        <div class="card mb-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="bi bi-file-earmark-pdf-fill"></i>自动化PDF翻译工具
+            </div>
             <div class="card-body">
                 <form id="translationForm">
                     <div class="mb-4">
-                        <label for="pdfUrl" class="form-label">PDF URL</label>
+                        <label for="pdfUrl" class="form-label">PDF文档URL</label>
                         <input type="url" class="form-control" id="pdfUrl" 
-                               placeholder="https://example.com/research-paper.pdf" 
+                               placeholder="https://arxiv.org/abs/2507.18454" 
                                required>
-                        <div class="form-text text-muted mt-1">
-                            支持 arXiv、CVPR 等学术平台的 PDF 链接
+                        <div class="supported-platforms mt-2">
+                            <span class="platform-tag">arXiv</span>
+                            <span class="platform-tag">CVPR</span>
+                            <span class="platform-tag">...</span>
                         </div>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-translate me-2"></i>开始翻译
+                        <i class="bi bi-translate me-1"></i>开始翻译文档
                     </button>
                 </form>
                 
                 <div id="progressContainer" class="progress-container">
                     <div class="progress">
-                        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                        <div id="progressBar" class="progress-bar progress-bar-striped" 
                              role="progressbar" style="width: 0%"></div>
                     </div>
                     <div id="progressText" class="progress-text mt-2">
-                        <span class="spinner"></span> 初始化中...
+                        <span class="spinner"></span> 正在初始化翻译引擎...
                     </div>
                 </div>
                 
-                <div id="resultContainer" class="result-container alert-success">
-                    <h4 class="alert-heading" id="resultTitle">翻译完成！</h4>
-                    <p id="resultMessage" class="mb-3"></p>
-                    <hr>
-                    <p class="mb-0" id="resultLink">
-                        <a href="" target="_blank" class="text-success fw-medium">
-                            <i class="bi bi-external-link me-1"></i>查看翻译结果
-                        </a>
-                    </p>
+                <div id="resultContainer" class="result-container">
+                    <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i>翻译完成！</h4>
+                    <p id="resultMessage" class="result-message">您的文档已成功翻译并准备好下载。</p>
+                    <button id="downloadBtn" class="btn btn-outline">
+                        <i class="bi bi-download me-1"></i>下载翻译文档
+                    </button>
                 </div>
                 
-                <div id="errorContainer" class="error-container alert-danger">
-                    <strong><i class="bi bi-exclamation-circle me-1"></i>错误：</strong> 
-                    <span id="errorMessage"></span>
+                <div id="errorContainer" class="error-container">
+                    <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i>处理错误</h4>
+                    <p id="errorMessage" class="result-message">无法处理您的请求，请检查URL或稍后再试。</p>
                 </div>
             </div>
         </div>
         
-        <div class="card requirements-card mt-4">
-            <div class="card-body">
-                <h5 class="card-title text-primary mb-3">
-                    <i class="bi bi-info-circle me-2"></i>使用要求
-                </h5>
-                <p class="card-text">
-                    本工具需要在本地环境安装 Playwright。<br>
-                    <strong>请确保已运行以下命令：</strong>
-                    <code>playwright install</code>
-                </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <h3 class="feature-title">自动化下载上传翻译</h3>
+                <p class="feature-desc">无需手动下载，上传</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="bi bi-translate"></i>
+                </div>
+                <h3 class="feature-title">arXiv、CVPR自动获取标题</h3>
+                <p class="feature-desc">自动获取arXiv、CVPR等平台的论文标题，无需手动输入</p>
             </div>
         </div>
+        
+        <div class="card mt-4">
+            <div class="card-header">
+                <i class="bi bi-gear-fill"></i>本地环境要求
+            </div>
+
+            <div class="card-body">
+                <p class="result-message">本工具需要在本地环境安装 Playwright 以使用浏览器自动化功能。</p>
+                <div class="d-flex align-items-center mt-3">
+                    <div class="bg-dark p-3 rounded me-3">
+                        <code class="text-light">playwright install</code>
+                    </div>
+                    <button class="btn btn-outline" id="copyCmdBtn">
+                        <i class="bi bi-files me-1"></i>复制命令
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <a href="https://github.com/Knighthood2001/AutoBabelDocTranslator" 
+                       class="btn btn-primary" target="_blank">
+                       <i class="bi bi-box-arrow-up-right me-1"></i>访问项目仓库
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>AutoBabelDocTranslator &copy; 2025 | 学术研究辅助工具</p>
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -299,88 +512,129 @@
         const resultContainer = document.getElementById('resultContainer');
         const errorContainer = document.getElementById('errorContainer');
         const resultMessage = document.getElementById('resultMessage');
-        const resultLink = document.getElementById('resultLink');
+        const downloadBtn = document.getElementById('downloadBtn');
         const errorMessage = document.getElementById('errorMessage');
+        const copyCmdBtn = document.getElementById('copyCmdBtn');
 
-        form.addEventListener('submit', function(e) {
+        // 状态与进度映射（与后端状态保持一致）
+        const statusConfig = {
+            'initializing': { message: '初始化翻译引擎...', progress: 0 },
+            'downloading': { message: '正在下载PDF文档...', progress: 20 },
+            'parsing': { message: '解析文档元数据...', progress: 35 },
+            'uploading': { message: '上传至翻译服务...', progress: 50 },
+            'translating': { message: '翻译文档内容...', progress: 70 },
+            'processing': { message: '处理公式和图表...', progress: 85 },
+            'completed': { message: '翻译完成，准备下载...', progress: 100 },
+            'error': { message: '处理失败', progress: 0 }
+        };
+
+        // 表单提交逻辑
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
             const url = urlInput.value.trim();
             if (!url) return;
 
             // 重置UI状态
             resetUI();
             
-            // 显示进度容器并初始化状态
-            progressContainer.style.display = 'block';
-            setTimeout(() => progressContainer.classList.add('show'), 10);
-            progressBar.style.width = '0%';
-            progressText.innerHTML = '<span class="spinner"></span> 开始处理翻译任务...';
+            try {
+                // 显示进度容器
+                progressContainer.style.display = 'block';
+                setTimeout(() => progressContainer.classList.add('show'), 10);
+                updateProgress('initializing');
 
-            // 提交翻译请求
-            fetch('/translate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ url: url })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error('请求失败，请检查网络');
-                return response.json();
-            })
-            .then(data => {
-                if (data.error) throw new Error(data.error);
-                
-                // 轮询状态更新（1.5秒一次，减少请求频率）
-                const statusInterval = setInterval(() => {
-                    fetch('/status')
-                        .then(res => res.json())
-                        .then(status => {
-                            // 更新进度文本
-                            progressText.innerHTML = `<span class="spinner"></span> ${status.message}`;
-                            
-                            // 模拟进度条更新（如果有百分比数据可替换）
-                            const progressMap = {
-                                'downloading': 30,
-                                'uploading': 50,
-                                'translating': 70,
-                                'completed': 100
-                            };
-                            const progress = progressMap[status.status] || 0;
-                            progressBar.style.width = `${progress}%`;
-                            
-                            // 处理完成状态
-                            if (status.status === 'completed') {
-                                clearInterval(statusInterval);
-                                progressContainer.classList.remove('show');
-                                setTimeout(() => {
-                                    progressContainer.style.display = 'none';
-                                    resultMessage.textContent = status.message;
-                                    resultLink.querySelector('a').href = status.translation_url || '#';
-                                    resultContainer.classList.add('show');
-                                }, 300);
-                            }
-                            
-                            // 处理错误状态
-                            if (status.status === 'error') {
-                                clearInterval(statusInterval);
-                                progressContainer.classList.remove('show');
-                                setTimeout(() => {
-                                    progressContainer.style.display = 'none';
-                                    errorMessage.textContent = status.message;
-                                    errorContainer.classList.add('show');
-                                }, 300);
-                            }
-                        })
-                        .catch(err => {
+                // 调用/translate接口提交任务
+                const translateRes = await fetch('/translate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: url })
+                });
+
+                if (!translateRes.ok) {
+                    throw new Error(`请求失败 (${translateRes.status})`);
+                }
+
+                const translateData = await translateRes.json();
+                if (translateData.error) {
+                    throw new Error(translateData.error);
+                }
+
+                // 轮询/status接口获取进度（1.5秒一次）
+                const statusInterval = setInterval(async () => {
+                    try {
+                        const statusRes = await fetch('/status');
+                        if (!statusRes.ok) {
+                            throw new Error('获取状态失败');
+                        }
+
+                        const statusData = await statusRes.json();
+                        const status = statusData.status;
+
+                        // 更新进度显示
+                        updateProgress(status, statusData.message);
+
+                        // 处理完成状态
+                        if (status === 'completed') {
                             clearInterval(statusInterval);
-                            showError('状态查询失败：' + err.message);
-                        });
-                }, 1500); // 1.5秒轮询一次
-            })
-            .catch(err => {
-                showError(err.message);
-            });
+                            // 保存翻译结果URL用于下载
+                            downloadBtn.onclick = () => {
+                                if (statusData.translation_url) {
+                                    window.open(statusData.translation_url, '_blank');
+                                } else {
+                                    alert('翻译文档URL不存在');
+                                }
+                            };
+                            // 显示结果
+                            setTimeout(() => {
+                                showResult(statusData.message || '翻译已完成');
+                            }, 800);
+                        }
+
+                        // 处理错误状态
+                        if (status === 'error') {
+                            clearInterval(statusInterval);
+                            showError(statusData.message || '处理过程中发生错误');
+                        }
+
+                    } catch (err) {
+                        clearInterval(statusInterval);
+                        showError(`状态查询失败: ${err.message}`);
+                    }
+                }, 1500);
+
+            } catch (err) {
+                showError(`提交失败: ${err.message}`);
+            }
         });
+
+        // 更新进度显示
+        function updateProgress(status, customMessage = '') {
+            const config = statusConfig[status] || statusConfig['initializing'];
+            progressBar.style.width = `${config.progress}%`;
+            progressText.innerHTML = `<span class="spinner"></span> ${customMessage || config.message}`;
+        }
+
+        // 显示结果
+        function showResult(message) {
+            progressContainer.classList.remove('show');
+            setTimeout(() => {
+                progressContainer.style.display = 'none';
+                resultMessage.textContent = message;
+                resultContainer.style.display = 'block';
+                setTimeout(() => resultContainer.classList.add('show'), 10);
+            }, 500);
+        }
+
+        // 显示错误
+        function showError(message) {
+            progressContainer.classList.remove('show');
+            setTimeout(() => {
+                progressContainer.style.display = 'none';
+                errorMessage.textContent = message;
+                errorContainer.style.display = 'block';
+                setTimeout(() => errorContainer.classList.add('show'), 10);
+            }, 500);
+        }
 
         // 重置UI状态
         function resetUI() {
@@ -388,22 +642,18 @@
             errorContainer.classList.remove('show');
             resultContainer.style.display = 'none';
             errorContainer.style.display = 'none';
+            // 清除下载按钮旧事件
+            downloadBtn.onclick = null;
         }
 
-        // 显示错误信息
-        function showError(msg) {
-            progressContainer.classList.remove('show');
+        // 复制命令按钮
+        copyCmdBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('playwright install');
+            const originalHtml = copyCmdBtn.innerHTML;
+            copyCmdBtn.innerHTML = '<i class="bi bi-check2 me-1"></i>已复制';
             setTimeout(() => {
-                progressContainer.style.display = 'none';
-                errorMessage.textContent = msg;
-                errorContainer.classList.add('show');
-            }, 300);
-        }
-
-        // 输入框验证反馈
-        urlInput.addEventListener('input', function() {
-            const isValid = this.checkValidity();
-            this.classList.toggle('border-danger', !isValid && this.value);
+                copyCmdBtn.innerHTML = originalHtml;
+            }, 2000);
         });
     </script>
 </body>

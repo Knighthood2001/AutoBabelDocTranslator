@@ -81,3 +81,69 @@
 2025-07-25 20:09:33 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-25 20:09:34 AutoBabelDocTranslator INFO - ✅ 已开始翻译
 2025-07-25 20:12:27 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-25 21:40:24 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 21:40:24 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 21:40:24 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:40:25 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 21:40:26 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 21:40:26 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 21:40:26 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:40:28 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 21:40:28 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:40:42 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 21:40:42 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:40:54 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:41:00 AutoBabelDocTranslator ERROR - ❌ 翻译过程中出错: Page.click: Target page, context or browser has been closed
+Call log:
+waiting for locator("//*[@id=\"turnstile-container\"]/div[1]/div[1]/div[1]")
+
+2025-07-25 21:46:05 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 21:46:05 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 21:46:05 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:46:07 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 21:46:08 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:46:21 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 21:46:21 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 21:46:24 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 21:46:25 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-25 21:48:16 AutoBabelDocTranslator INFO - 获取到论文标题: The New LLM Bottleneck: A Systems Perspective on Latent Attention and Mixture-of-Experts
+2025-07-25 21:48:16 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.15465
+2025-07-25 21:48:16 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/The New LLM Bottleneck_ A Systems Perspective on Latent Attention and Mixture-of-Experts.pdf
+2025-07-25 21:48:17 AutoBabelDocTranslator INFO - 📦 文件大小: 1.81 MB
+2025-07-25 21:48:33 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/The New LLM Bottleneck_ A Systems Perspective on Latent Attention and Mixture-of-Experts.pdf
+2025-07-25 21:48:47 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 21:48:47 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/The New LLM Bottleneck_ A Systems Perspective on Latent Attention and Mixture-of-Experts.pdf
+2025-07-25 21:48:50 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 21:48:51 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-25 21:50:56 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-25 21:51:06 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-25 22:04:47 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 22:04:47 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 22:04:47 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:04:49 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 22:04:51 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:05:18 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 22:05:18 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 22:05:18 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:05:19 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 22:18:02 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 22:18:02 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 22:18:02 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:18:03 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 22:18:05 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:18:30 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-25 22:18:30 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-25 22:18:30 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:18:32 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-25 22:18:34 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:18:44 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-25 22:18:44 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-25 22:18:46 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-25 22:18:47 AutoBabelDocTranslator INFO - ✅ 已开始翻译
