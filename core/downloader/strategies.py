@@ -6,6 +6,8 @@ from pathvalidate import sanitize_filename
 from typing import Optional
 from abc import ABC, abstractmethod
 
+from utils import logger
+
 class DownloadStrategy(ABC):
     def __init__(self, save_dir: str = "."):
         self.save_dir = save_dir
@@ -69,7 +71,7 @@ class ArxivDownloadStrategy(DownloadStrategy):
             return f"arxiv_{paper_id}"
 
         except requests.exceptions.RequestException as e:
-            print(f"获取标题失败: {str(e)}")
+            logger.warning(f"获取标题失败: {str(e)}")
             paper_id = os.path.basename(urlparse(abs_url).path)
             return f"arxiv_{paper_id}"
 
@@ -101,9 +103,9 @@ class ArxivDownloadStrategy(DownloadStrategy):
 
         try:
             title = self._get_title_from_abs(abs_url)
-            print(f"获取到论文标题: {title}")
+            logger.info(f"获取到论文标题: {title}")
         except Exception as e:
-            print(f"获取标题失败: {str(e)}")
+            logger.warning(f"获取标题失败: {str(e)}")
             title = None
 
         if not filename:
@@ -118,8 +120,8 @@ class ArxivDownloadStrategy(DownloadStrategy):
 
         save_path = os.path.join(current_save_dir, f"{filename}.pdf")
 
-        print(f"📥 开始下载: {pdf_url}")
-        print(f"💾 保存路径: {save_path}")
+        logger.info(f"📥 开始下载: {pdf_url}")
+        logger.info(f"💾 保存路径: {save_path}")
         try:
             response = requests.get(pdf_url, stream=True, headers=self.headers, timeout=30)
             response.raise_for_status()
@@ -127,7 +129,7 @@ class ArxivDownloadStrategy(DownloadStrategy):
             file_size = int(response.headers.get('Content-Length', 0))
             if file_size > 0:
                 size_mb = file_size / (1024 * 1024)
-                print(f"📦 文件大小: {size_mb:.2f} MB")
+                logger.info(f"📦 文件大小: {size_mb:.2f} MB")
 
             downloaded = 0
             with open(save_path, 'wb') as f:
@@ -139,11 +141,11 @@ class ArxivDownloadStrategy(DownloadStrategy):
                             percent = (downloaded / file_size) * 100
                             print(f"\r📊 下载进度: {percent:.1f}% ({downloaded/(1024*1024):.1f} MB)", end="")
 
-            print(f"\n✅ 下载完成: {save_path}")
+            logger.info(f"\n✅ 下载完成: {save_path}")
             return save_path
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ 下载失败: {e}")
+            logger.warning(f"❌ 下载失败: {e}")
             return None
 
 # CVPR 下载策略
@@ -162,15 +164,15 @@ class CVPRDownloadStrategy(DownloadStrategy):
 
         save_path = os.path.join(current_save_dir, f"{filename}.pdf")
 
-        print(f"📥 开始下载: {pdf_url}")
-        print(f"💾 保存路径: {save_path}")
+        logger.info(f"📥 开始下载: {pdf_url}")
+        logger.info(f"💾 保存路径: {save_path}")
 
         try:
             with requests.get(pdf_url, stream=True, headers=self.headers, timeout=30) as response:
                 response.raise_for_status()
                 total = int(response.headers.get('Content-Length', 0))
                 if total > 0:
-                    print(f"📦 文件大小: {total / (1024 * 1024):.2f} MB")
+                    logger.info(f"📦 文件大小: {total / (1024 * 1024):.2f} MB")
 
                 downloaded = 0
                 with open(save_path, 'wb') as f:
@@ -181,11 +183,11 @@ class CVPRDownloadStrategy(DownloadStrategy):
                             if total > 0:
                                 percent = downloaded / total * 100
                                 print(f"\r📊 下载进度: {percent:.1f}% ({downloaded/(1024*1024):.1f} MB)", end="")
-                print(f"\n✅ 下载完成: {save_path}")
+                logger.info(f"\n✅ 下载完成: {save_path}")
                 return save_path
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ 下载失败: {e}")
+            logger.warning(f"❌ 下载失败: {e}")
             return None
 
 # 普通 PDF 下载策略
@@ -204,15 +206,15 @@ class GenericPDFDownloadStrategy(DownloadStrategy):
 
         save_path = os.path.join(current_save_dir, f"{filename}.pdf")
 
-        print(f"📥 开始下载: {pdf_url}")
-        print(f"💾 保存到: {save_path}")
+        logger.info(f"📥 开始下载: {pdf_url}")
+        logger.info(f"💾 保存到: {save_path}")
 
         try:
             with requests.get(pdf_url, stream=True, headers=self.headers, timeout=30) as response:
                 response.raise_for_status()
                 total = int(response.headers.get('Content-Length', 0))
                 if total > 0:
-                    print(f"📦 文件大小: {total / (1024 * 1024):.2f} MB")
+                    logger.info(f"📦 文件大小: {total / (1024 * 1024):.2f} MB")
 
                 downloaded = 0
                 with open(save_path, 'wb') as f:
@@ -223,9 +225,9 @@ class GenericPDFDownloadStrategy(DownloadStrategy):
                             if total > 0:
                                 percent = downloaded / total * 100
                                 print(f"\r📊 下载进度: {percent:.1f}% ({downloaded/(1024*1024):.1f} MB)", end="")
-            print(f"\n✅ 下载完成: {save_path}")
+            logger.info(f"\n✅ 下载完成: {save_path}")
             return save_path
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ 下载失败: {e}")
+            logger.warning(f"❌ 下载失败: {e}")
             return None

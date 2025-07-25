@@ -6,6 +6,8 @@ from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError
 from .browser.manager import BrowserManager
 from .browser.config import BrowserProfile
 
+from utils import logger
+
 class BabelDocTranslator:
     def __init__(
         self,
@@ -51,18 +53,6 @@ class BabelDocTranslator:
         finally:
             await self.manager.close()
 
-    # async def _ensure_logged_in(self, page: Page, url: str, wait_seconds: int):
-    #     """确保已登录状态"""
-    #     await page.goto(url)
-        
-    #     try:
-    #         await page.wait_for_selector(self.login_selector, timeout=3000)
-    #         print(f"⚠️ 需要登录，等待 {wait_seconds} 秒...")
-    #         await asyncio.sleep(wait_seconds)
-    #         await self.manager.save_login_state()
-    #         await page.goto(url)  # 刷新页面
-    #     except PlaywrightTimeoutError:
-    #         print("✅ 已处于登录状态")
 
     async def _ensure_logged_in(self, page: Page, url: str, max_wait_seconds: int = 60):
         """确保已登录状态"""
@@ -71,14 +61,14 @@ class BabelDocTranslator:
         try:
             # 先检查是否显示登录按钮
             await page.wait_for_selector(self.login_selector, timeout=3000)
-            print("⚠️ 需要登录，请手动登录...")
+            logger.info("⚠️ 需要登录，请手动登录...")
             
             start_time = time.time()
             while True:
                 # 检查上传文件按钮是否存在（表示已登录）
                 try:
                     await page.wait_for_selector(self.uploadFile, timeout=1000)
-                    print("✅ 登录成功，已检测到上传按钮")
+                    logger.info("✅ 登录成功，已检测到上传按钮")
                     await self.manager.save_login_state()  # 保存登录状态
                     return
                 except PlaywrightTimeoutError:
@@ -86,6 +76,7 @@ class BabelDocTranslator:
                 
                 # 检查是否超时
                 if time.time() - start_time > max_wait_seconds:
+                    logger.error(f"等待登录超时（{max_wait_seconds}秒）")
                     raise TimeoutError(f"等待登录超时（{max_wait_seconds}秒）")
                 
                 # 短暂等待后继续检查
@@ -93,23 +84,23 @@ class BabelDocTranslator:
                 
         except PlaywrightTimeoutError:
             # 如果一开始就没找到登录按钮，说明已经登录
-            print("✅ 已处于登录状态")
+            logger.info("✅ 已处于登录状态")
 
 
     async def _upload_and_translate(self, page: Page, file_path: str):
         """执行文件上传和翻译"""
         await page.set_input_files(self.file_input_selector, file_path)
-        print(f"📄 已上传文件: {file_path}")
+        logger.info(f"📄 已上传文件: {file_path}")
 
         try:
             await asyncio.sleep(2)  # 等待验证码加载
             await page.click(self.captcha_selector)
-            print("✅ 已通过验证")
+            logger.info("✅ 已通过验证")
             
             await page.click(self.translate_selector)
-            print("✅ 已开始翻译")
+            logger.info("✅ 已开始翻译")
         except Exception as e:
-            print(f"❌ 翻译过程中出错: {e}")
+            logger.error(f"❌ 翻译过程中出错: {e}")
             raise
 
     async def _wait_for_completion(self, page: Page):
@@ -117,4 +108,4 @@ class BabelDocTranslator:
         event = asyncio.Event()
         page.on("close", lambda _: event.set())
         await event.wait()
-        print("✅ 翻译流程完成")
+        logger.info("✅ 翻译流程完成")

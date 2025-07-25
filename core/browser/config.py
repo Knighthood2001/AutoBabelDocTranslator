@@ -1,14 +1,21 @@
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import List, Optional, Dict
 
+import getScreenSize
+width, height = getScreenSize.get_screen_size()
 # 浏览器会话配置
 @dataclass
 class BrowserProfile:
-    storage_state: str = "loginstate.json"   # 存储登录状态的JSON文件路径
-    viewport: Optional[dict] = None   # 浏览器视口大小，默认None表示使用默认值
-    screen: Optional[dict] = None   # 浏览器屏幕大小，默认None表示使用默认值
-    user_agent: str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"   # 浏览器用户代理
-    accept_downloads: bool = True   # 是否允许下载文件，默认为True
+    storage_state: str = "loginstate.json"
+    viewport: Optional[Dict[str, int]] = None
+    screen: Optional[Dict[str, int]] = None  # 改为单一字典
+    user_agent: str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    accept_downloads: bool = True
+
+    def __post_init__(self):
+        if self.viewport is None:
+            width, height = getScreenSize.get_screen_size()
+            self.viewport = {'width': width, 'height': height}
 
 # 浏览器配置
 @dataclass
