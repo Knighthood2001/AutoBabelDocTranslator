@@ -3,18 +3,38 @@ import re
 import requests
 from urllib.parse import urlparse
 from pathvalidate import sanitize_filename
+from typing import Optional
+from abc import ABC, abstractmethod
 
-# 抽象基类，定义下载策略的接口
-class DownloadStrategy:
-    def __init__(self, save_dir="."):
+class DownloadStrategy(ABC):
+    def __init__(self, save_dir: str = "."):
         self.save_dir = save_dir
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
         }
         os.makedirs(self.save_dir, exist_ok=True)
 
-    def download(self, url, filename=None, save_dir=None):
-        raise NotImplementedError("Subclasses should implement this method.")
+    @abstractmethod
+    def download(self, url: str, filename: Optional[str] = None, save_dir: Optional[str] = None) -> Optional[str]:
+        pass
+
+    def _sanitize_filename(self, name: str) -> str:
+        """
+        文件名合法性验证，移除非法字符并替换为下划线。
+
+        Args:
+        name (str): 需要清理的文件名。
+
+        Returns:
+        str: 清理后的文件名。
+
+        Raises:
+        ImportError: 如果导入 `sanitize_filename` 函数时发生错误。
+        """
+        try:
+            return sanitize_filename(name, replacement_text="_")
+        except ImportError:
+            return re.sub(r'[^\w\s-]', '', name).strip()
 
 # Arxiv 下载策略
 class ArxivDownloadStrategy(DownloadStrategy):
@@ -209,31 +229,3 @@ class GenericPDFDownloadStrategy(DownloadStrategy):
         except requests.exceptions.RequestException as e:
             print(f"❌ 下载失败: {e}")
             return None
-
-# 上下文类，根据 URL 选择合适的下载策略
-class PDFDownloader:
-    def __init__(self, save_dir="."):
-        self.save_dir = save_dir
-
-    def download(self, url, filename=None, save_dir=None):
-        if "arxiv.org" in url:
-            strategy = ArxivDownloadStrategy(save_dir=self.save_dir)
-        elif "openaccess.thecvf.com" in url:
-            strategy = CVPRDownloadStrategy(save_dir=self.save_dir)
-        else:
-            strategy = GenericPDFDownloadStrategy(save_dir=self.save_dir)
-
-        return strategy.download(url, filename, save_dir)
-
-# 使用示例
-if __name__ == "__main__":
-    downloader = PDFDownloader(save_dir="/home/wu/code/papers")
-
-    # 下载 Arxiv 论文
-    # downloader.download("https://arxiv.org/pdf/2111.02045.pdf")
-
-    # 下载 CVPR 论文
-    downloader.download("https://openaccess.thecvf.com/content/CVPR2024/papers/Zhuang_Vlogger_Make_Your_Dream_A_Vlog_CVPR_2024_paper.pdf")
-
-    # 下载普通 PDF
-    # downloader.download("https://example.com/sample.pdf", filename="sample")

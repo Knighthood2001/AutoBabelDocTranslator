@@ -1,24 +1,24 @@
 import asyncio
-import argparse
-from PDFPaperDownloader import PDFDownloader
-from BabelDocHandler import BabelDocUploader
+from core.downloader.manager import DownloadManager
+from core.translator import BabelDocTranslator
 
-async def main(url):
-    downloader = PDFDownloader(save_dir="/home/wu/code/papers")
-    uploader = BabelDocUploader(storage_state="loginstate.json")
+async def process_paper(url: str, save_dir: str = "./papers"):
+    # 1. 下载论文
+    downloader = DownloadManager(save_dir)
+    strategy = downloader.get_strategy(url)
+    pdf_path = strategy.download(url)
     
-    # Download and upload the PDF
-    input_file_path = downloader.download(url)
-    await uploader.upload_file(input_file_path)
-    print(f"✅ Successfully downloaded and uploaded: {url}")
+    if not pdf_path:
+        print("❌ 论文下载失败")
+        return
+
+    # 2. 翻译文档
+    translator = BabelDocTranslator()
+    await translator.upload_file(pdf_path)
 
 if __name__ == "__main__":
-    # Set up argument parser
-    parser = argparse.ArgumentParser(description='Download a PDF from arXiv and upload to BabelDoc for translation')
-    parser.add_argument('url', type=str, help='URL of the PDF to download and translate')
-    
-    # Parse arguments
-    args = parser.parse_args()
-    
-    # Run the async main function
-    asyncio.run(main(args.url))
+    # 示例：处理arXiv论文
+    asyncio.run(process_paper(
+        "https://arxiv.org/abs/2107.12090",
+        save_dir="/home/wu/code/papers"
+    ))

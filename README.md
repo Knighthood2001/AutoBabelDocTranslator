@@ -69,10 +69,9 @@ playwright install
 #### 上传并翻译 PDF
 
 ```bash
-python main.py https://arxiv.org/pdf/2111.02045
+python main.py
 ```
 
-另外，`url2babeldoc.py`脚本可以在你的编辑器中执行。
 
 ## 🤝 贡献指南
 
