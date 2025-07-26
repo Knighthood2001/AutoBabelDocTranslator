@@ -24,7 +24,7 @@ class BrowserConfig:
     headless: bool = False   # 是否以无头模式运行，默认为False
     args: Optional[List[str]] = None  # 浏览器启动参数，默认为None
     ignore_default_args: Optional[List[str]] = None   # 忽略的默认启动参数，默认为None
-    channel: Optional[str] = None  # 新增 channel 参数
+    channel: Optional[str] = None  # 新增 channel 参数  # chrome or msedge
     
     def __post_init__(self):
         self.args = self.args or [

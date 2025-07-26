@@ -15,6 +15,17 @@ class BabelDocTranslator:
         browser_config: Optional[dict] = None,
         browser_profile: Optional[dict] = None
     ):
+        # 默认配置
+        default_browser_config = {
+            "type": "chromium",
+            "channel": "msedge",  # 默认使用 Edge
+            "headless": False
+        }
+        
+        # 合并用户自定义配置
+        if browser_config:
+            default_browser_config.update(browser_config)
+            
         profile = BrowserProfile(**(browser_profile or {}))
         profile.storage_state = storage_state
         

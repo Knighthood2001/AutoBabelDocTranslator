@@ -13,7 +13,15 @@ async def process_paper(url: str, save_dir: str = "./papers"):
         return
 
     # 2. 翻译文档
-    translator = BabelDocTranslator()
+    # translator = BabelDocTranslator()
+    translator = BabelDocTranslator(
+        browser_config={
+            "type": "chromium",
+            "channel": "msedge",  # 或 "chrome" 使用 Chrome
+            "headless": False
+        }
+    )
+        
     await translator.upload_file(pdf_path)
 
 if __name__ == "__main__":
