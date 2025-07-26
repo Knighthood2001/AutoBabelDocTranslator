@@ -141,7 +141,7 @@ class ArxivDownloadStrategy(DownloadStrategy):
                             percent = (downloaded / file_size) * 100
                             print(f"\r📊 下载进度: {percent:.1f}% ({downloaded/(1024*1024):.1f} MB)", end="")
 
-            logger.info(f"\n✅ 下载完成: {save_path}")
+            logger.info(f"✅ 下载完成: {save_path}")
             return save_path
 
         except requests.exceptions.RequestException as e:

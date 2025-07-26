@@ -98,7 +98,8 @@ python web/app.py
 ```
 就能够使用网页界面了。
 
-![webUI](doc/imgs/webUI.png)
+
+![webUI2](doc/imgs/webUI2.png)
 ## 🤝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
