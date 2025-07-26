@@ -443,9 +443,9 @@
                 <div id="resultContainer" class="result-container">
                     <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i>翻译完成！</h4>
                     <p id="resultMessage" class="result-message">您的文档已成功翻译并准备好下载。</p>
-                    <!-- <button id="downloadBtn" class="btn btn-outline">
+                    <button id="downloadBtn" class="btn btn-outline">
                         <i class="bi bi-download me-1"></i>下载翻译文档
-                    </button> -->
+                    </button>
                 </div>
                 
                 <div id="errorContainer" class="error-container">
@@ -503,121 +503,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // 获取DOM元素引用，获取了HTML中所有需要交互的DOM元素，包括表单、输入框、进度条容器
-        const form = document.getElementById('translationForm');
-        const urlInput = document.getElementById('pdfUrl');
-        const progressContainer = document.getElementById('progressContainer');
-        const progressBar = document.getElementById('progressBar');
-        const progressText = document.getElementById('progressText');
-        const resultContainer = document.getElementById('resultContainer');
-        const errorContainer = document.getElementById('errorContainer');
-        const resultMessage = document.getElementById('resultMessage');
-        const downloadBtn = document.getElementById('downloadBtn');
-        const errorMessage = document.getElementById('errorMessage');
-        const copyCmdBtn = document.getElementById('copyCmdBtn');
-
-        // 状态与进度映射（与后端状态保持一致）
-        const statusConfig = {
-            'initializing': { message: '初始化翻译引擎...', progress: 0 },
-            'processing': { message: '开始处理...', progress: 20 },
-            'downloading': { message: '上传至翻译服务...', progress: 50 },
-            'translating': { message: '翻译文档内容...', progress: 70 },
-            'completed': { message: '翻译完成，准备下载...', progress: 100 },
-            'error': { message: '处理失败', progress: 0 }
-        };
-
-        // 表单提交逻辑
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const url = urlInput.value.trim();
-            if (!url) return;
-
-            // 重置UI状态
-            resetUI();
-            
-            try {
-                // 显示进度容器
-                progressContainer.style.display = 'block';
-                setTimeout(() => progressContainer.classList.add('show'), 10);
-                updateProgress('initializing');  // 显示初始化信息
-
-
-                // 调用/translate接口提交任务
-                const translateRes = await fetch('/translate', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ url: url })
-                });
-
-                if (!translateRes.ok) {
-                    throw new Error(`请求失败 (${translateRes.status})`);
-                }
-
-                const translateData = await translateRes.json();
-                if (translateData.error) {
-                    throw new Error(translateData.error);
-                }
-                setTimeout(() => updateProgress('initializing'), 1000);
-                setTimeout(() => updateProgress('processing') , 1000);
-                setTimeout(() => updateProgress('downloading'), 1000);
-                setTimeout(() => updateProgress('translating') , 1000);
-                setTimeout(() => updateProgress('completed') , 1000);
-
-                showResult('请等待babel-doc的翻译过程');  // 显示初始化信息
-            } catch (err) {
-                showError(`提交失败: ${err.message}`);
-            }
-        });
-
-        // 更新进度显示
-        function updateProgress(status, customMessage = '') {
-            const config = statusConfig[status] || statusConfig['initializing'];
-            progressBar.style.width = `${config.progress}%`;
-            progressText.innerHTML = `<span class="spinner"></span> ${customMessage || config.message}`;
-        }
-
-        // 显示结果
-        function showResult(message) {
-            progressContainer.classList.remove('show');
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-                resultMessage.textContent = message;
-                resultContainer.style.display = 'block';
-                setTimeout(() => resultContainer.classList.add('show'), 10);
-            }, 500);
-        }
-
-        // 显示错误
-        function showError(message) {
-            progressContainer.classList.remove('show');
-            setTimeout(() => {
-                progressContainer.style.display = 'none';
-                errorMessage.textContent = message;
-                errorContainer.style.display = 'block';
-                setTimeout(() => errorContainer.classList.add('show'), 10);
-            }, 500);
-        }
-
-        // 重置UI状态
-        function resetUI() {
-            resultContainer.classList.remove('show');
-            errorContainer.classList.remove('show');
-            resultContainer.style.display = 'none';
-            errorContainer.style.display = 'none';
-            // 清除下载按钮旧事件
-            downloadBtn.onclick = null;
-        }
-
-        // 复制命令按钮
-        copyCmdBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText('playwright install');
-            const originalHtml = copyCmdBtn.innerHTML;
-            copyCmdBtn.innerHTML = '<i class="bi bi-check2 me-1"></i>已复制';
-            setTimeout(() => {
-                copyCmdBtn.innerHTML = originalHtml;
-            }, 2000);
-        });
-    </script>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
