@@ -157,3 +157,53 @@ waiting for locator("//*[@id=\"turnstile-container\"]/div[1]/div[1]/div[1]")
 2025-07-26 13:54:29 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
 2025-07-26 13:54:31 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-26 13:54:32 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-26 14:18:27 AutoBabelDocTranslator INFO - 获取到论文标题: Nonlinear topological pumping of edge solitons
+2025-07-26 14:18:27 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00019
+2025-07-26 14:18:27 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Nonlinear topological pumping of edge solitons.pdf
+2025-07-26 14:18:28 AutoBabelDocTranslator INFO - 📦 文件大小: 4.45 MB
+2025-07-26 14:18:29 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Nonlinear topological pumping of edge solitons.pdf
+2025-07-26 14:18:37 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-26 14:18:37 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Nonlinear topological pumping of edge solitons.pdf
+2025-07-26 14:18:39 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-26 14:18:40 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-26 14:21:55 AutoBabelDocTranslator INFO - 获取到论文标题: Dynamics of Pendulum Forced by a Magnetic Excitation with Position-Dependent Phase
+2025-07-26 14:21:55 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00023
+2025-07-26 14:21:55 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Dynamics of Pendulum Forced by a Magnetic Excitation with Position-Dependent Phase.pdf
+2025-07-26 14:21:56 AutoBabelDocTranslator INFO - 📦 文件大小: 23.17 MB
+2025-07-26 14:22:15 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Dynamics of Pendulum Forced by a Magnetic Excitation with Position-Dependent Phase.pdf
+2025-07-26 14:22:23 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-26 14:22:23 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Dynamics of Pendulum Forced by a Magnetic Excitation with Position-Dependent Phase.pdf
+2025-07-26 14:22:25 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-26 14:22:26 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-26 14:23:14 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-26 15:55:21 AutoBabelDocTranslator INFO - 获取到论文标题: Prompt emission of relativistic protons up to GeV energies from M6.4-class solar flare on July 17, 2023
+2025-07-26 15:55:21 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2401.00002
+2025-07-26 15:55:21 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Prompt emission of relativistic protons up to GeV energies from M6.4-class solar flare on July 17, 2.pdf
+2025-07-26 15:55:22 AutoBabelDocTranslator INFO - 📦 文件大小: 3.99 MB
+2025-07-26 15:56:04 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Prompt emission of relativistic protons up to GeV energies from M6.4-class solar flare on July 17, 2.pdf
+2025-07-26 15:56:17 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-26 15:56:17 AutoBabelDocTranslator INFO - 📄 已上传文件: /home/wu/AutoBabelDocTranslator/papers/Prompt emission of relativistic protons up to GeV energies from M6.4-class solar flare on July 17, 2.pdf
+2025-07-26 15:56:19 AutoBabelDocTranslator ERROR - ❌ 翻译过程中出错: Page.click: Target page, context or browser has been closed
+2025-07-26 16:02:53 AutoBabelDocTranslator INFO - 获取到论文标题: Structural controllability and management of cascading regime shifts
+2025-07-26 16:02:53 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00206
+2025-07-26 16:02:53 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Structural controllability and management of cascading regime shifts.pdf
+2025-07-26 16:02:59 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2501.00206 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1145)')))
+2025-07-26 16:04:09 AutoBabelDocTranslator INFO - 获取到论文标题: Structural controllability and management of cascading regime shifts
+2025-07-26 16:04:09 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00206
+2025-07-26 16:04:09 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Structural controllability and management of cascading regime shifts.pdf
+2025-07-26 16:04:14 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2501.00206 (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))
+2025-07-26 16:05:05 AutoBabelDocTranslator INFO - 获取到论文标题: Structural controllability and management of cascading regime shifts
+2025-07-26 16:05:05 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00206
+2025-07-26 16:05:05 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/Structural controllability and management of cascading regime shifts.pdf
+2025-07-26 16:05:07 AutoBabelDocTranslator INFO - 📦 文件大小: 2.55 MB
+2025-07-26 16:05:09 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/Structural controllability and management of cascading regime shifts.pdf
+2025-07-26 16:07:05 AutoBabelDocTranslator INFO - 获取到论文标题: PRACtical: Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowhammer Mitigation
+2025-07-26 16:07:05 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2507.18581
+2025-07-26 16:07:05 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf
+2025-07-26 16:07:08 AutoBabelDocTranslator INFO - 📦 文件大小: 2.71 MB
+2025-07-26 16:07:10 AutoBabelDocTranslator INFO - 
+✅ 下载完成: /home/wu/AutoBabelDocTranslator/papers/PRACtical_ Subarray-Level Counter Update and Bank-Level Recovery Isolation for Efficient PRAC Rowham.pdf

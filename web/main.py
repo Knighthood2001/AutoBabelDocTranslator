@@ -25,12 +25,13 @@ async def process_paper(url: str, save_dir: str = "./papers"):
             result['message'] = '❌ Failed to download paper'
             return result
 
+        result['status'] = 'downloaded'
         result['pdf_path'] = str(pdf_path)
         result['message'] = '✅ Paper downloaded successfully'
         
         # 2. Translate document
         translator = BabelDocTranslator()
-        translation_url = await translator.upload_file(pdf_path)
+        await translator.upload_file(pdf_path) 
         
         result['status'] = 'completed'
         result['message'] = '✅ Translation completed'
@@ -40,6 +41,7 @@ async def process_paper(url: str, save_dir: str = "./papers"):
         result['message'] = f'❌ Error: {str(e)}'
     
     return result
+
 
 def run_translation(url, save_dir):
     """Synchronous wrapper for async process"""

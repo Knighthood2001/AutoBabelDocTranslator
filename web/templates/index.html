@@ -443,9 +443,9 @@
                 <div id="resultContainer" class="result-container">
                     <h4 class="alert-heading"><i class="bi bi-check-circle-fill"></i>翻译完成！</h4>
                     <p id="resultMessage" class="result-message">您的文档已成功翻译并准备好下载。</p>
-                    <button id="downloadBtn" class="btn btn-outline">
+                    <!-- <button id="downloadBtn" class="btn btn-outline">
                         <i class="bi bi-download me-1"></i>下载翻译文档
-                    </button>
+                    </button> -->
                 </div>
                 
                 <div id="errorContainer" class="error-container">
@@ -558,44 +558,13 @@
                 if (translateData.error) {
                     throw new Error(translateData.error);
                 }
+                setTimeout(() => updateProgress('initializing'), 1000);
+                setTimeout(() => updateProgress('processing') , 1000);
+                setTimeout(() => updateProgress('downloading'), 1000);
+                setTimeout(() => updateProgress('translating') , 1000);
+                setTimeout(() => updateProgress('completed') , 1000);
 
-                // 轮询/status接口获取进度（1.5秒一次）
-                const statusInterval = setInterval(async () => {
-                    try {
-                        const statusRes = await fetch('/status');
-                        if (!statusRes.ok) {
-                            throw new Error('获取状态失败');
-                        }
-
-                        const statusData = await statusRes.json();
-                        const status = statusData.status;
-
-                        // 更新进度显示
-                        updateProgress(status, statusData.message);
-
-                        // 处理完成状态
-                        if (status === 'completed') {
-                            clearInterval(statusInterval);
-                            // 保存翻译结果URL用于下载
-                            downloadBtn.onclick = () => {
-                                if (statusData.translation_url) {
-                                    window.open(statusData.translation_url, '_blank');
-                                } else {
-                                    alert('翻译文档URL不存在');
-                                }
-                            };
-                            // 显示结果
-                            setTimeout(() => {
-                                showResult(statusData.message || '翻译已完成');
-                            }, 800);
-                        }
-
-
-                    } catch (err) {
-                        clearInterval(statusInterval);
-                    }
-                }, 1500);
-
+                showResult('请等待babel-doc的翻译过程');  // 显示初始化信息
             } catch (err) {
                 showError(`提交失败: ${err.message}`);
             }
