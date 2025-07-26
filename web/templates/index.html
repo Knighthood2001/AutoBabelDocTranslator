@@ -504,6 +504,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // 获取DOM元素引用，获取了HTML中所有需要交互的DOM元素，包括表单、输入框、进度条容器
         const form = document.getElementById('translationForm');
         const urlInput = document.getElementById('pdfUrl');
         const progressContainer = document.getElementById('progressContainer');
@@ -519,11 +520,9 @@
         // 状态与进度映射（与后端状态保持一致）
         const statusConfig = {
             'initializing': { message: '初始化翻译引擎...', progress: 0 },
-            'downloading': { message: '正在下载PDF文档...', progress: 20 },
-            'parsing': { message: '解析文档元数据...', progress: 35 },
-            'uploading': { message: '上传至翻译服务...', progress: 50 },
+            'processing': { message: '开始处理...', progress: 20 },
+            'downloading': { message: '上传至翻译服务...', progress: 50 },
             'translating': { message: '翻译文档内容...', progress: 70 },
-            'processing': { message: '处理公式和图表...', progress: 85 },
             'completed': { message: '翻译完成，准备下载...', progress: 100 },
             'error': { message: '处理失败', progress: 0 }
         };
@@ -541,7 +540,8 @@
                 // 显示进度容器
                 progressContainer.style.display = 'block';
                 setTimeout(() => progressContainer.classList.add('show'), 10);
-                updateProgress('initializing');
+                updateProgress('initializing');  // 显示初始化信息
+
 
                 // 调用/translate接口提交任务
                 const translateRes = await fetch('/translate', {
@@ -590,15 +590,9 @@
                             }, 800);
                         }
 
-                        // 处理错误状态
-                        if (status === 'error') {
-                            clearInterval(statusInterval);
-                            showError(statusData.message || '处理过程中发生错误');
-                        }
 
                     } catch (err) {
                         clearInterval(statusInterval);
-                        showError(`状态查询失败: ${err.message}`);
                     }
                 }, 1500);
 

@@ -8,12 +8,10 @@ import json
 from pathlib import Path
 
 async def process_paper(url: str, save_dir: str = "./papers"):
-    """Modified to return status information"""
     result = {
         'status': 'processing',
         'message': '',
-        'pdf_path': '',
-        'translation_url': ''
+        'pdf_path': ''
     }
     
     try:
@@ -36,7 +34,6 @@ async def process_paper(url: str, save_dir: str = "./papers"):
         
         result['status'] = 'completed'
         result['message'] = '✅ Translation completed'
-        result['translation_url'] = translation_url
         
     except Exception as e:
         result['status'] = 'error'
