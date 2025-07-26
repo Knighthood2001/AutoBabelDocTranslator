@@ -81,13 +81,15 @@ playwright install
 
 ### 🏃 使用教程
 
-#### 方式1：上传并翻译 PDF
+目前有两种方式实现
+
+#### 方式1：命令行模式 (CLI) 
 
 ```bash
 python main.py
 ```
 
-#### 方式2：webUI中使用
+#### 方式2：网页交互模式 (Web UI)
 
 ```bash
 python web/app.py
@@ -98,8 +100,8 @@ python web/app.py
 ```
 就能够使用网页界面了。
 
-
 ![webUI2](doc/imgs/webUI2.png)
+
 ## 🤝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
