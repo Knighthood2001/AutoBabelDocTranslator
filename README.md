@@ -102,6 +102,8 @@ python web/app.py
 
 ![webUI2](doc/imgs/webUI2.png)
 
+> **当然，网页交互模式，可能会存在小部分bug，还请多多包涵。**
+
 ## 🤝 贡献指南
 
 欢迎提交 Issue 和 Pull Request！
