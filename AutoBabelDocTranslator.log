@@ -74,3 +74,19 @@
 2025-07-27 13:52:35 AutoBabelDocTranslator INFO - 📄 已上传文件: .\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
 2025-07-27 13:52:37 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-27 13:52:38 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-27 14:06:13 AutoBabelDocTranslator WARNING - 获取标题失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /abs/2501.00009 (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))
+2025-07-27 14:06:13 AutoBabelDocTranslator INFO - 获取到论文标题: arxiv_2501.00009
+2025-07-27 14:06:13 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00009
+2025-07-27 14:06:13 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers\arxiv_2501.00009.pdf
+2025-07-27 14:06:13 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2501.00009 (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))
+2025-07-27 14:10:16 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-27 14:10:19 AutoBabelDocTranslator INFO - 📄 已上传文件: .\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 14:10:21 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-27 14:10:22 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-27 14:10:26 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-27 14:14:08 AutoBabelDocTranslator INFO - ⚠️ 需要登录，请手动登录...
+2025-07-27 14:14:36 AutoBabelDocTranslator INFO - ✅ 登录成功，已检测到上传按钮
+2025-07-27 14:14:36 AutoBabelDocTranslator INFO - 📄 已上传文件: .\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 14:14:50 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-27 14:14:50 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-27 14:15:09 AutoBabelDocTranslator INFO - ✅ 翻译流程完成

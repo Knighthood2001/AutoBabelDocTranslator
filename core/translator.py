@@ -60,14 +60,14 @@ class BabelDocTranslator:
         
         try:
             # 先检查是否显示登录按钮
-            await page.wait_for_selector(self.login_selector, timeout=3000)
+            await page.wait_for_selector(self.login_selector, timeout=10000)  # 太短可能会导致跳过登录
             logger.info("⚠️ 需要登录，请手动登录...")
             
             start_time = time.time()
             while True:
                 # 检查上传文件按钮是否存在（表示已登录）
                 try:
-                    await page.wait_for_selector(self.uploadFile, timeout=1000)
+                    await page.wait_for_selector(self.uploadFile, timeout=10000)
                     logger.info("✅ 登录成功，已检测到上传按钮")
                     await self.manager.save_login_state()  # 保存登录状态
                     return
