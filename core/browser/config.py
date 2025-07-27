@@ -1,8 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Optional, Dict
-
 import getScreenSize
-width, height = getScreenSize.get_screen_size()
+
 # 浏览器会话配置
 @dataclass
 class BrowserProfile:
