@@ -24,7 +24,7 @@ class BrowserManager:
             )
             if not os.path.exists(self.profile.storage_state):
                 with open(self.profile.storage_state, "w") as f:
-                    f.write("{}")  # 写入空JSON对象
+                    f.write("")  # 写入空JSON对象
 
             self._context = await self._browser.new_context(
                 viewport=self.profile.viewport,

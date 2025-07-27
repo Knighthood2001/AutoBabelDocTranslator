@@ -22,23 +22,3 @@ class DownloadManager:
         elif "openaccess.thecvf.com" in url:
             return self._strategy_map["cvpr"](self.save_dir)
         return self._strategy_map["default"](self.save_dir)
-
-    # @classmethod
-    # def register_strategy(cls, name: str, strategy_class):
-    #     """
-    #     注册新的下载策略。
-
-    #     Args:
-    #         cls (class): 需要注册下载策略的类。
-    #         name (str): 下载策略的名称。
-    #         strategy_class (class): 下载策略类。
-
-    #     Returns:
-    #         None
-    #     """
-    #     cls._strategy_map[name] = strategy_class
-if __name__ == "__main__":
-    downloadmanager = DownloadManager("/home/wu/code/papers")
-    arxiv_strategy = downloadmanager.get_strategy("https://arxiv.org/abs/2206.05123")
-    result = arxiv_strategy.download("https://arxiv.org/abs/2206.05123")
-    print("下载结果:", result)

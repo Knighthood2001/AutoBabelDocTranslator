@@ -36,3 +36,41 @@
 2025-07-26 20:32:49 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-26 20:32:50 AutoBabelDocTranslator INFO - ✅ 已开始翻译
 2025-07-26 21:03:12 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-27 13:10:50 AutoBabelDocTranslator INFO - 获取到论文标题: REKnow: Enhanced Knowledge for Joint Entity and Relation Extraction
+2025-07-27 13:10:50 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.05123
+2025-07-27 13:10:50 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/code/papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:10:51 AutoBabelDocTranslator INFO - 📦 文件大小: 0.93 MB
+2025-07-27 13:13:10 AutoBabelDocTranslator INFO - 获取到论文标题: REKnow: Enhanced Knowledge for Joint Entity and Relation Extraction
+2025-07-27 13:13:10 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.05123
+2025-07-27 13:13:10 AutoBabelDocTranslator INFO - 💾 保存路径: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:13:12 AutoBabelDocTranslator INFO - 📦 文件大小: 0.93 MB
+2025-07-27 13:13:49 AutoBabelDocTranslator INFO - ✅ 下载完成: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:15:28 AutoBabelDocTranslator INFO - 获取到论文标题: REKnow: Enhanced Knowledge for Joint Entity and Relation Extraction
+2025-07-27 13:15:28 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.05123
+2025-07-27 13:15:28 AutoBabelDocTranslator INFO - 💾 保存路径: papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:15:29 AutoBabelDocTranslator INFO - 📦 文件大小: 0.93 MB
+2025-07-27 13:16:58 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out.
+2025-07-27 13:17:24 AutoBabelDocTranslator INFO - 获取到论文标题: REKnow: Enhanced Knowledge for Joint Entity and Relation Extraction
+2025-07-27 13:17:24 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.05123
+2025-07-27 13:17:24 AutoBabelDocTranslator INFO - 💾 保存路径: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:17:25 AutoBabelDocTranslator INFO - 📦 文件大小: 0.93 MB
+2025-07-27 13:18:13 AutoBabelDocTranslator INFO - ✅ 下载完成: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:20:29 AutoBabelDocTranslator INFO - 获取到论文标题: Machine learning models for Si nanoparticle growth in nonthermal plasma
+2025-07-27 13:20:29 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00003
+2025-07-27 13:20:29 AutoBabelDocTranslator INFO - 💾 保存路径: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\Machine learning models for Si nanoparticle growth in nonthermal plasma.pdf
+2025-07-27 13:20:31 AutoBabelDocTranslator INFO - 📦 文件大小: 4.27 MB
+2025-07-27 13:23:09 AutoBabelDocTranslator INFO - ✅ 下载完成: E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers\Machine learning models for Si nanoparticle growth in nonthermal plasma.pdf
+2025-07-27 13:43:14 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-27 13:43:29 AutoBabelDocTranslator INFO - 📄 已上传文件: .\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:43:32 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-27 13:43:33 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-27 13:47:16 AutoBabelDocTranslator INFO - 获取到论文标题: Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB
+2025-07-27 13:47:16 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00009
+2025-07-27 13:47:16 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 13:47:18 AutoBabelDocTranslator INFO - 📦 文件大小: 1.13 MB
+2025-07-27 13:48:09 AutoBabelDocTranslator INFO - ✅ 下载完成: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 13:48:26 AutoBabelDocTranslator INFO - ⚠️ 需要登录，请手动登录...
+2025-07-27 13:52:27 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-27 13:52:35 AutoBabelDocTranslator INFO - 📄 已上传文件: .\papers\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-27 13:52:37 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-27 13:52:38 AutoBabelDocTranslator INFO - ✅ 已开始翻译
