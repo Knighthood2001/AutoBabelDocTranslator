@@ -4,14 +4,21 @@ import threading
 import os
 import time
 from datetime import datetime
-
+import sys
+from pathlib import Path
 
 app = Flask(__name__)
 
-# Configuration
-UPLOAD_FOLDER = os.path.join(os.path.expanduser('~'), 'AutoBabelDocTranslator', 'papers')
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+# UPLOAD_FOLDER = os.path.join(os.path.expanduser('~'), 'AutoBabelDocTranslator', 'papers')
+# print(UPLOAD_FOLDER)    # C:\Users\knighthood\AutoBabelDocTranslator\papers
+
+project_root = str(Path(__file__).resolve().parent.parent)
+sys.path.insert(0, project_root)  # 添加到搜索路径首位
+UPLOAD_FOLDER = os.path.join(project_root, 'papers')
+# print(UPLOAD_FOLDER)     # E:\code\AutoBabelDocTranslator\AutoBabelDocTranslator\papers
+
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
 @app.route('/')
