@@ -90,3 +90,22 @@
 2025-07-27 14:14:50 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-27 14:14:50 AutoBabelDocTranslator INFO - ✅ 已开始翻译
 2025-07-27 14:15:09 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-27 14:19:50 AutoBabelDocTranslator WARNING - 获取标题失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /abs/2501.00009 (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))
+2025-07-27 14:19:50 AutoBabelDocTranslator INFO - 获取到论文标题: arxiv_2501.00009
+2025-07-27 14:19:50 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00009
+2025-07-27 14:19:50 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers\arxiv_2501.00009.pdf
+2025-07-27 14:19:50 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2501.00009 (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))
+2025-07-27 14:20:02 AutoBabelDocTranslator INFO - 获取到论文标题: Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB
+2025-07-27 14:20:02 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00009
+2025-07-27 14:20:02 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 14:20:04 AutoBabelDocTranslator INFO - 📦 文件大小: 1.13 MB
+2025-07-27 14:22:01 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out.
+2025-07-27 14:22:40 AutoBabelDocTranslator INFO - 获取到论文标题: Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB
+2025-07-27 14:22:40 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00009
+2025-07-27 14:22:40 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 14:22:41 AutoBabelDocTranslator INFO - 📦 文件大小: 1.13 MB
+2025-07-27 14:24:27 AutoBabelDocTranslator INFO - ✅ 下载完成: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 14:24:52 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-27 14:24:52 AutoBabelDocTranslator INFO - 📄 已上传文件: ./papers\Model-Driven Deep Neural Network for Enhanced AoA Estimation Using 5G gNB.pdf
+2025-07-27 14:24:54 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-27 14:24:55 AutoBabelDocTranslator INFO - ✅ 已开始翻译

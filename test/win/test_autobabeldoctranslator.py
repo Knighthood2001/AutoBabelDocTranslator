@@ -1,4 +1,4 @@
-# test/win/test_downloadPDF.py
+# test/win/test_autobabeldoctranslator.py
 import sys
 from pathlib import Path
 
