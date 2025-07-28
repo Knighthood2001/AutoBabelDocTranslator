@@ -8,7 +8,7 @@ sys.path.insert(0, project_root)  # 添加到搜索路径首位
 
 from core.downloader.manager import DownloadManager
 downloadmanager = DownloadManager("E:\\code\\AutoBabelDocTranslator\\AutoBabelDocTranslator\\papers")
-url = "https://arxiv.org/abs/2501.00003"
+url = "https://arxiv.org/abs/2501.00022"
 arxiv_strategy = downloadmanager.get_strategy(url)
 result = arxiv_strategy.download(url)
 print("下载结果:", result)

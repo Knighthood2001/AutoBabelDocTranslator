@@ -16,5 +16,5 @@ async def process_paper(pdf_path):
 
 if __name__ == "__main__":
     # 示例：处理arXiv论文
-    asyncio.run(process_paper(pdf_path=".\\papers\\REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf"
+    asyncio.run(process_paper(pdf_path="./papers/REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf"
     ))

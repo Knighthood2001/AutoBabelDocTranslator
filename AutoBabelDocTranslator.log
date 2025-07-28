@@ -139,3 +139,60 @@
 2025-07-27 14:43:34 AutoBabelDocTranslator INFO - ✅ 已通过验证
 2025-07-27 14:43:35 AutoBabelDocTranslator INFO - ✅ 已开始翻译
 2025-07-27 14:45:22 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-28 15:05:24 AutoBabelDocTranslator INFO - 获取到论文标题: Algorithmic Idealism II: Reassessment of Competing Theories
+2025-07-28 15:05:24 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00022
+2025-07-28 15:05:24 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:05:24 AutoBabelDocTranslator INFO - 📦 文件大小: 0.21 MB
+2025-07-28 15:05:26 AutoBabelDocTranslator INFO - ✅ 下载完成: ./papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:05:35 AutoBabelDocTranslator INFO - ⚠️ 需要登录，请手动登录...
+2025-07-28 15:05:52 AutoBabelDocTranslator INFO - ✅ 登录成功，已检测到上传按钮
+2025-07-28 15:05:53 AutoBabelDocTranslator INFO - 📄 已上传文件: ./papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:05:55 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-28 15:05:55 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-28 15:07:43 AutoBabelDocTranslator INFO - ✅ 翻译流程完成
+2025-07-28 15:09:03 AutoBabelDocTranslator INFO - 获取到论文标题: Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies
+2025-07-28 15:09:03 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.00022
+2025-07-28 15:09:03 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies.pdf
+2025-07-28 15:09:04 AutoBabelDocTranslator INFO - 📦 文件大小: 3.69 MB
+2025-07-28 15:10:33 AutoBabelDocTranslator INFO - 获取到论文标题: Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies
+2025-07-28 15:10:33 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.00022
+2025-07-28 15:10:33 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies.pdf
+2025-07-28 15:10:34 AutoBabelDocTranslator INFO - 📦 文件大小: 3.69 MB
+2025-07-28 15:12:12 AutoBabelDocTranslator INFO - 获取到论文标题: Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies
+2025-07-28 15:12:12 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.00022
+2025-07-28 15:12:12 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies.pdf
+2025-07-28 15:12:13 AutoBabelDocTranslator INFO - 📦 文件大小: 3.69 MB
+2025-07-28 15:13:40 AutoBabelDocTranslator INFO - 获取到论文标题: Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies
+2025-07-28 15:13:40 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2206.00022
+2025-07-28 15:13:40 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/code/autobabeldoctranslatorwindows/AutoBabelDocTranslator/papers/Consequences of the lack of azimuthal freedom in the modeling of lensing galaxies.pdf
+2025-07-28 15:13:40 AutoBabelDocTranslator INFO - 📦 文件大小: 3.69 MB
+2025-07-28 15:14:51 AutoBabelDocTranslator INFO - 获取到论文标题: Machine learning models for Si nanoparticle growth in nonthermal plasma
+2025-07-28 15:14:51 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00003
+2025-07-28 15:14:51 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Machine learning models for Si nanoparticle growth in nonthermal plasma.pdf
+2025-07-28 15:14:52 AutoBabelDocTranslator INFO - 📦 文件大小: 4.27 MB
+2025-07-28 15:15:46 AutoBabelDocTranslator INFO - 获取到论文标题: Algorithmic Idealism II: Reassessment of Competing Theories
+2025-07-28 15:15:46 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00022
+2025-07-28 15:15:46 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:15:47 AutoBabelDocTranslator INFO - 📦 文件大小: 0.21 MB
+2025-07-28 15:15:48 AutoBabelDocTranslator INFO - ✅ 下载完成: ./papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:17:51 AutoBabelDocTranslator WARNING - 获取标题失败: HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out. (read timeout=10)
+2025-07-28 15:17:51 AutoBabelDocTranslator INFO - 获取到论文标题: arxiv_2501.00022
+2025-07-28 15:17:51 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00022
+2025-07-28 15:17:51 AutoBabelDocTranslator INFO - 💾 保存路径: ./papers/arxiv_2501.00022.pdf
+2025-07-28 15:17:51 AutoBabelDocTranslator INFO - 📦 文件大小: 0.21 MB
+2025-07-28 15:17:53 AutoBabelDocTranslator INFO - ✅ 下载完成: ./papers/arxiv_2501.00022.pdf
+2025-07-28 15:19:17 AutoBabelDocTranslator INFO - 获取到论文标题: Algorithmic Idealism II: Reassessment of Competing Theories
+2025-07-28 15:19:17 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00022
+2025-07-28 15:19:17 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/code/autobabeldoctranslatorwindows/AutoBabelDocTranslator/papers/Algorithmic Idealism II_ Reassessment of Competing Theories.pdf
+2025-07-28 15:19:26 AutoBabelDocTranslator INFO - 📦 文件大小: 0.21 MB
+2025-07-28 15:19:56 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out.
+2025-07-28 15:20:46 AutoBabelDocTranslator INFO - 获取到论文标题: Spin waves in magnetic nanodisks, nanorings, and 3D nanovolcanoes
+2025-07-28 15:20:46 AutoBabelDocTranslator INFO - 📥 开始下载: https://arxiv.org/pdf/2501.00333
+2025-07-28 15:20:46 AutoBabelDocTranslator INFO - 💾 保存路径: /home/wu/code/autobabeldoctranslatorwindows/AutoBabelDocTranslator/papers/Spin waves in magnetic nanodisks, nanorings, and 3D nanovolcanoes.pdf
+2025-07-28 15:20:46 AutoBabelDocTranslator INFO - 📦 文件大小: 13.45 MB
+2025-07-28 15:26:02 AutoBabelDocTranslator WARNING - ❌ 下载失败: HTTPSConnectionPool(host='arxiv.org', port=443): Read timed out.
+2025-07-28 15:30:16 AutoBabelDocTranslator INFO - ✅ 已处于登录状态
+2025-07-28 15:30:16 AutoBabelDocTranslator INFO - 📄 已上传文件: ./papers/REKnow_ Enhanced Knowledge for Joint Entity and Relation Extraction.pdf
+2025-07-28 15:30:18 AutoBabelDocTranslator INFO - ✅ 已通过验证
+2025-07-28 15:30:19 AutoBabelDocTranslator INFO - ✅ 已开始翻译
+2025-07-28 15:30:23 AutoBabelDocTranslator INFO - ✅ 翻译流程完成

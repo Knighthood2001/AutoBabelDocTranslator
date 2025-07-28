@@ -19,5 +19,5 @@ async def process_paper(url: str, save_dir: str = "./papers"):
 if __name__ == "__main__":
     # 示例：处理arXiv论文
     asyncio.run(process_paper(
-        "https://arxiv.org/abs/2501.00011",
+        "https://arxiv.org/abs/2501.00022",
     ))
