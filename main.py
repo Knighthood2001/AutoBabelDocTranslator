@@ -19,6 +19,5 @@ async def process_paper(url: str, save_dir: str = "./papers"):
 if __name__ == "__main__":
     # 示例：处理arXiv论文
     asyncio.run(process_paper(
-        "https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Dynamic_Dual_Gating_Neural_Networks_ICCV_2021_paper.pdf",
-        save_dir="/home/wu/code/papers"
+        "https://arxiv.org/abs/2501.00022",
     ))
