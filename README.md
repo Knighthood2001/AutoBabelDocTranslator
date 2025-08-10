@@ -24,6 +24,8 @@
 **AutoBabelDocTranslator** 是一个自动化工具，能够将 PDF 文件自动上传至 https://app.immersivetranslate.com/babel-doc 平台进行翻译。支持保留登录状态、自动点击验证和翻译按钮，实现自动化 PDF 翻译流程。
 
 
+![babeldoc-show](doc/babeldoc.gif)
+
 ## 项目初衷
 
 我做这个项目的原因，有以下几点：
